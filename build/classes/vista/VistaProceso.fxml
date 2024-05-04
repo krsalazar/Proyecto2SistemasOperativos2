@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="887.0" prefWidth="649.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controlador.VistaProcesoController">
+   <children>
+      <Label layoutX="154.0" layoutY="14.0" text="Simulador de Memoria Dinamica">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="62.0" text="Memoria Total">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="290.0" layoutY="62.0" text="SO necesaria">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPesoSO" layoutX="385.0" layoutY="60.0" prefHeight="25.0" prefWidth="84.0" />
+      <TextField fx:id="txtTamanoMemoria" layoutX="141.0" layoutY="60.0" prefHeight="25.0" prefWidth="84.0" />
+      <Button fx:id="btnCrearMemoria" layoutX="540.0" layoutY="60.0" mnemonicParsing="false" onAction="#click_crear_memoria" prefHeight="25.0" prefWidth="84.0" text="Crear" />
+      <Line endX="547.0" layoutX="101.0" layoutY="105.0" startX="-100.0" />
+      <Label layoutX="22.0" layoutY="203.0" text="Nombre Proceso">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" layoutX="147.0" layoutY="202.0" prefHeight="25.0" prefWidth="84.0" />
+      <Label layoutX="23.0" layoutY="238.0" text="Tamano Proceso">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTamano" layoutX="147.0" layoutY="236.0" prefHeight="25.0" prefWidth="84.0" />
+      <Label layoutX="24.0" layoutY="275.0" text="Llegada Proceso">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLlegada" layoutX="148.0" layoutY="271.0" prefHeight="25.0" prefWidth="84.0" />
+      <Label layoutX="25.0" layoutY="310.0" text="Duracion Proceso">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDuracion" layoutX="148.0" layoutY="307.0" prefHeight="25.0" prefWidth="84.0" />
+      <Button fx:id="btnInsertarProceso" layoutX="81.0" layoutY="347.0" mnemonicParsing="false" onAction="#click_insertar_proceso" text="Insertar Proceso" />
+<TableView fx:id="tblProcesos" layoutX="301.0" layoutY="189.0" prefHeight="236.0" prefWidth="294.0">
+    <columns>
+        <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre">
+            
+        </TableColumn>
+        <TableColumn fx:id="colTamano" prefWidth="75.0" text="Tamano">
+           
+        </TableColumn>
+        <TableColumn fx:id="colLlegada" prefWidth="75.0" text="Llegada">
+           
+        </TableColumn>
+        <TableColumn fx:id="colDuracion" prefWidth="75.0" text="Duracion">
+            
+        </TableColumn>
+    </columns>
+</TableView>
+
+      <Label layoutX="258.0" layoutY="137.0" text="Tabla Procesos">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Line endX="547.0" layoutX="100.0" layoutY="447.0" startX="-100.0" />
+      <Label layoutX="257.0" layoutY="454.0" text="Detalle Simulacion">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <ListView layoutX="105.0" layoutY="491.0" prefHeight="333.0" prefWidth="471.0" />
+      <Button fx:id="btnIniciarSimulacion" layoutX="183.0" layoutY="837.0" mnemonicParsing="false" onAction="#click_comenzar_simulacion" text="Iniciar Simulacion" />
+      <Button fx:id="btnGenerarBitacora" layoutX="402.0" layoutY="837.0" mnemonicParsing="false" onAction="#click_generar_bitacora" text="Generar Bitacora" />
+   </children>
+</AnchorPane>
